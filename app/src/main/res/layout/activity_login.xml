@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.yps.assignment_5.LoginActivity"
+    >
+
+    <TextView
+        android:text="@string/first_time_user_register_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="142dp"
+        android:id="@+id/firstTimeUserTV"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:text="@string/nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="44dp"
+        android:id="@+id/nickNameTV"
+        android:layout_above="@+id/password"
+        android:layout_toStartOf="@+id/loginButton_login"
+        android:textSize="32sp"/>
+
+    <TextView
+        android:text="@string/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
+        android:id="@+id/password"
+        android:textSize="32sp"
+        android:layout_above="@+id/loginButton_login"
+        android:layout_alignStart="@+id/nickNameTV" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="@string/hintNick"
+        android:id="@+id/nicknameET_login"
+        android:textSize="32sp"
+        android:layout_alignBaseline="@+id/nickNameTV"
+        android:layout_alignBottom="@+id/nickNameTV"
+        android:layout_toEndOf="@+id/loginButton_login" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="@string/hintPassword"
+        android:id="@+id/passwordET_login"
+        android:textSize="32sp"
+        android:layout_alignBaseline="@+id/password"
+        android:layout_alignBottom="@+id/password"
+        android:layout_alignStart="@+id/nicknameET_login" />
+
+    <Button
+        android:text="@string/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/registerButton_login"
+        android:layout_marginTop="54dp"
+        android:layout_alignTop="@+id/firstTimeUserTV"
+        android:layout_alignStart="@+id/loginButton_login"
+        android:onClick="onRegistrationClick_login"/>
+
+    <TextView
+        android:text="@string/login_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:id="@+id/loginPageTV"
+        android:textSize="30sp"/>
+
+    <Button
+        android:text="@string/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loginButton_login"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onLoginClick_login"/>
+
+</RelativeLayout>
